@@ -37,14 +37,15 @@ module.exports = {
       },
       {
         test: /(\.css|\.scss)$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
+      },
+      {
+        test: /\.(png|jp(e*)g|svg|gif)$/,
         use: [
-          "style-loader",
-          "css-loader",
           {
-            loader: "sass-loader",
+            loader: "file-loader",
             options: {
-              includePaths: [path.resolve(__dirname, "/src", "scss")],
-              sourceMap: true,
+              name: "images/[hash]-[name].[ext]",
             },
           },
         ],

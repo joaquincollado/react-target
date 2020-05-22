@@ -1,0 +1,54 @@
+$black: #000000;
+$white: #ffffff;
+
+.signin-form {
+  margin-bottom: 55px;
+  .form-label {
+    display: block;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 15px;
+    letter-spacing: 1.65px;
+    color: $black;
+  }
+  .form-input {
+    border-radius: 0;
+    border: 0.5px solid $black;
+    &:focus {
+      border-color: $black;
+      box-shadow: none;
+    }
+  }
+  .form-button:not(:disabled) {
+    width: 100%;
+    border-radius: 0;
+    background-color: $black;
+    border-color: $black;
+    color: $white;
+    height: 37px;
+    font-family: "Open Sans", sans-serif;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+    letter-spacing: 1.65px;
+  }
+  .form-link {
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 15px;
+    text-align: center;
+    display: block;
+    letter-spacing: 1.65px;
+    margin-top: 15px;
+    color: $black;
+  }
+}

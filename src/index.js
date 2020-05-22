@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "react-dom";
+import HomePage from "./components/home/HomePage";
+import "bootstrap/dist/css/bootstrap.css";
 
-const Hi = () => <p>Hi.</p>;
-
-render(<Hi />, document.getElementById("app"));
+render(<HomePage />, document.getElementById("app"));
