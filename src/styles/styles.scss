@@ -1,0 +1,6 @@
+@import "styles/common/_constants.scss";
+@import "../components/**/*.scss";
+
+body #app {
+  font-family: $openSans;
+}

@@ -1,4 +1,5 @@
-$black: #000000;
+@import "styles/common/_constants.scss";
+
 .h-100vh {
   height: 100vh;
 }
@@ -8,7 +9,6 @@ $black: #000000;
     padding-bottom: 16px;
   }
   .h1-target {
-    font-family: "Open Sans", sans-serif;
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
@@ -17,14 +17,12 @@ $black: #000000;
     margin-bottom: 13px;
   }
   .h2-target {
-    font-family: "Open Sans", sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 32px;
   }
   .p-target {
-    font-family: "Open Sans", sans-serif;
     width: 321px;
     height: 78px;
     font-size: 14px;
@@ -32,7 +30,6 @@ $black: #000000;
     margin-bottom: 49px;
   }
   .home-link {
-    font-family: "Open Sans", sans-serif;
     font-style: normal;
     font-weight: bold;
     text-transform: uppercase;
@@ -46,7 +43,7 @@ $black: #000000;
     display: block;
     content: "";
     padding-bottom: 11px;
-    border-bottom: 0.5px solid #000000;
+    border-bottom: 0.5px solid $black;
     width: 121px;
     margin: 0 auto 15px;
   }

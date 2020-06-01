@@ -1,15 +1,18 @@
-$skyblue: #2fbcf7;
+@import "styles/common/_constants.scss";
 
+.position-relative {
+  position: relative;
+}
+.absolute-center {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-55%, -50%);
+}
+.iphone-img {
+  height: 619px;
+  margin-top: 5rem;
+}
 .color-skyblue {
   background: $skyblue;
-}
-.mb-n80p {
-  margin-bottom: -80px;
-}
-.pt-80p {
-  padding-top: 80px;
-}
-.play-button {
-  top: 42vh;
-  position: absolute;
 }

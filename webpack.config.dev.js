@@ -1,10 +1,19 @@
-const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const magicImporter = require("node-sass-magic-importer");
 
 process.env.NODE_ENV = "development";
 
 module.exports = {
+  resolve: {
+    extensions: ["*", ".js", ".jsx", ".json"],
+    alias: {
+      assets: path.resolve(__dirname, "./src/assets/"),
+      components: path.resolve(__dirname, "./src/components/"),
+      locales: path.resolve(__dirname, "./src/locales/"),
+      styles: path.resolve(__dirname, "./src/styles/"),
+    },
+  },
   mode: "development",
   target: "web",
   devtool: "cheap-module-source-map",
@@ -37,7 +46,18 @@ module.exports = {
       },
       {
         test: /(\.css|\.scss)$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "sass-loader",
+            options: {
+              importer: magicImporter(),
+              includePaths: [path.resolve(__dirname, "./src", "scss")],
+              sourceMap: true,
+            },
+          },
+        ],
       },
       {
         test: /\.(png|jp(e*)g|svg|gif)$/,

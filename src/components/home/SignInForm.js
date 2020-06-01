@@ -1,6 +1,6 @@
 import React from "react";
+import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
-import "./SignInForm.scss";
 
 const SignInForm = () => (
   <form className="signin-form">
@@ -12,7 +12,7 @@ const SignInForm = () => (
     </div>
     <div className="form-group">
       <label htmlFor="inputPass" className="form-label">
-        Password
+        <FormattedMessage id="form.password" />
       </label>
       <input
         type="password"
@@ -21,10 +21,10 @@ const SignInForm = () => (
       />
     </div>
     <button className="form-button" type="submit">
-      Sign In
+      <FormattedMessage id="form.signin" />
     </button>
     <Link className="form-link" to="">
-      Forgot your password?
+      <FormattedMessage id="form.forgot" />
     </Link>
   </form>
 );
