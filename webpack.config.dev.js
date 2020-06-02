@@ -48,7 +48,12 @@ module.exports = {
         test: /(\.css|\.scss)$/,
         use: [
           "style-loader",
-          "css-loader",
+          {
+            loader: "css-loader",
+            options: {
+              sourceMap: true,
+            },
+          },
           {
             loader: "sass-loader",
             options: {

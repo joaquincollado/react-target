@@ -6,10 +6,10 @@ import AppStore from "components/common/AppStore";
 import SignInForm from "./SignInForm";
 
 const HomePage = () => (
-  <div className="container mw-100 h-100vh">
+  <div className="home-page">
     <div className="row h-100">
-      <div className="col-6 align-self-center">
-        <div className="row justify-content-center">
+      <div className="col-xs-6 log-section">
+        <div className="justify-content-center text-align-center">
           <img className="img-icon" src={logo} alt="smiles logo"></img>
         </div>
         <div className="row justify-content-center">
@@ -21,7 +21,7 @@ const HomePage = () => (
           </h2>
         </div>
         <div className="row justify-content-center">
-          <p className="p-target text-justify">
+          <p className="p-target text-align-center">
             <FormattedMessage id="home.welcome" />
           </p>
         </div>
