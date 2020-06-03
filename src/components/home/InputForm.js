@@ -1,18 +1,12 @@
 import React from "react";
 
-const InputForm = (props) => {
-  return (
-    <div className="form-group">
-      <label htmlFor={props.id} className="form-label">
-        {props.label}
-      </label>
-      <input
-        type={props.type}
-        className="form-control form-input"
-        id={props.id}
-      />
-    </div>
-  );
-};
+const InputForm = ({ id, label, type }) => (
+  <div className="form-group">
+    <label htmlFor={id} className="form-label">
+      {label}
+    </label>
+    <input type={type} className="form-control form-input" id={id} />
+  </div>
+);
 
 export default InputForm;
