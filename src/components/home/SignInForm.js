@@ -8,7 +8,7 @@ const SignInForm = () => (
     <InputForm label="Email" type="email" id="inputEmail" />
     <InputForm
       label={<FormattedMessage id="form.password" />}
-      type="email"
+      type="password"
       id="inputEmail"
     />
     <button className="form-button" type="submit">
