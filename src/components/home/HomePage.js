@@ -8,7 +8,7 @@ import SignInForm from "./SignInForm";
 const HomePage = () => (
   <div className="home-page">
     <div className="row h-100">
-      <div className="col-xs-6 log-section">
+      <div className="col-xs-6 log-section padding-bottom">
         <div className="justify-content-center text-align-center">
           <img className="img-icon" src={logo} alt="smiles logo"></img>
         </div>
