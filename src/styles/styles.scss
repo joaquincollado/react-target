@@ -1,0 +1,25 @@
+@import "styles/common/_constants.scss";
+@import "../components/**/*.scss";
+@import "../../node_modules//bootstrap-grid";
+
+html,
+body {
+  margin: 0;
+}
+#app {
+  margin: 0;
+  font-family: $openSans;
+  .row {
+    display: flex;
+    margin: 0;
+    .align-self-center {
+      align-self: center;
+    }
+    .justify-content-center {
+      justify-content: center;
+    }
+    .text-align-center {
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@import "styles/common/_constants.scss";
+
+.position-relative {
+  position: relative;
+}
+.absolute-center {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-55%, -50%);
+}
+.iphone-img {
+  height: 38.6875rem;
+  margin-top: 5rem;
+}
+.color-skyblue {
+  background: $skyblue;
+}
+.icon-app-store {
+  margin-bottom: 2rem;
+}
+.icon-left {
+  margin-right: 0.5rem;
+}
+.icon-right {
+  margin-left: 0.5rem;
+}
