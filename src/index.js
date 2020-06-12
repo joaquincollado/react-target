@@ -1,6 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
 import { IntlProvider } from "react-intl";
+import { BrowserRouter as Router } from "react-router-dom";
 import App from "components/App";
 import messages from "locales/messages";
 
@@ -14,7 +15,9 @@ const locale =
 
 render(
   <IntlProvider locale={locale} messages={messages[locale]}>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </IntlProvider>,
   document.getElementById("app")
 );

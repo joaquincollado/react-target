@@ -1,0 +1,20 @@
+@import "styles/common/_constants.scss";
+
+.signup-section {
+  margin-top: 8rem;
+  .h1-target {
+    margin-bottom: 3rem;
+  }
+  .form-select {
+    height: 2.8rem;
+    width: 12rem;
+    margin-bottom: 1.25rem;
+    border-radius: 0;
+    border: 0.5px solid $black;
+    text-transform: uppercase;
+    &:focus {
+      border-color: $black;
+      box-shadow: none;
+    }
+  }
+}
