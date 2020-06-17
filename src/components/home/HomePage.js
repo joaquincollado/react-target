@@ -5,7 +5,7 @@ import logo from "assets/icons/smilies.svg";
 import SignInForm from "./SignInForm";
 
 const HomePage = () => (
-  <div className="col-xs-6 log-section padding-bottom">
+  <div className="col-sm-6 col-xs-12 log-section padding-bottom">
     <div className="justify-content-center text-align-center">
       <img className="img-icon" src={logo} alt="smiles logo"></img>
     </div>

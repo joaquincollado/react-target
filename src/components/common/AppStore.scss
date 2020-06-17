@@ -25,3 +25,8 @@
 .icon-right {
   margin-left: 0.5rem;
 }
+@media screen and (max-width: $mobile) {
+  .display-none--mobile {
+    display: none;
+  }
+}
