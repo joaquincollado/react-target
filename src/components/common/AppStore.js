@@ -6,7 +6,7 @@ import FacebookIcon from "assets/common/Facebook.png";
 import TwitterIcon from "assets/common/Twitter.png";
 
 const AppStore = () => (
-  <div className="col-xs-6 color-skyblue padding-bottom">
+  <div className="col-xs-6 color-skyblue padding-bottom display-none--mobile">
     <div className="row justify-content-center position-relative">
       <img className="iphone-img" src={iPhoneImg} alt="iphone6"></img>
       <img className="absolute-center" src={PlayIcon} alt="play"></img>

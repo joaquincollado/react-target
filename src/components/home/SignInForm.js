@@ -1,7 +1,7 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
-import InputForm from "./InputForm";
+import InputForm from "components/common/InputForm";
 
 const SignInForm = () => (
   <form className="signin-form">
@@ -9,7 +9,7 @@ const SignInForm = () => (
     <InputForm
       label={<FormattedMessage id="form.password" />}
       type="password"
-      id="inputEmail"
+      id="inputPassword"
     />
     <button className="form-button" type="submit">
       <FormattedMessage id="form.signin" />
