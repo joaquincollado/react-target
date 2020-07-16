@@ -1,7 +1,7 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
-import InputForm from "./InputForm";
+import InputForm from "components/common/InputForm";
 
 const SignInForm = () => (
   <form className="signin-form">

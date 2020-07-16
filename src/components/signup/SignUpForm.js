@@ -1,7 +1,7 @@
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-import InputForm from "components/home/InputForm";
-import SelectForm from "components/signup/SelectForm";
+import InputForm from "components/common/InputForm";
+import SelectForm from "components/common/SelectForm";
 
 const SignUpForm = () => {
   const intl = useIntl();
@@ -28,7 +28,7 @@ const SignUpForm = () => {
         label={<FormattedMessage id="form.password" />}
         type="password"
         id="inputPassword"
-        placeholder={useIntl().formatMessage({ id: "form.placeholder" })}
+        placeholder={intl.formatMessage({ id: "form.placeholder" })}
       />
       <InputForm
         label={<FormattedMessage id="form.confirmPassword" />}
@@ -39,7 +39,7 @@ const SignUpForm = () => {
         <label htmlFor="genderSelect" className="form-label">
           <FormattedMessage id="form.gender" />
         </label>
-        <SelectForm options={selectOptions} />
+        <SelectForm options={selectOptions} id="genderSelect" />
       </div>
       <button className="form-button" type="submit">
         <FormattedMessage id="form.signin" />
