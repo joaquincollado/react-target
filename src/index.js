@@ -4,8 +4,11 @@ import { IntlProvider } from "react-intl";
 import { BrowserRouter as Router } from "react-router-dom";
 import App from "components/App";
 import messages from "locales/messages";
+import configureStore from "./redux/configureStore";
+import { Provider as ReduxProvider } from "react-redux";
 
 const usersLocale = navigator.language.split("-")[0];
+const store = configureStore();
 
 const locale =
   (navigator.languages && usersLocale) ||
@@ -14,10 +17,12 @@ const locale =
   "en";
 
 render(
-  <IntlProvider locale={locale} messages={messages[locale]}>
-    <Router>
-      <App />
-    </Router>
-  </IntlProvider>,
+  <ReduxProvider store={store}>
+    <IntlProvider locale={locale} messages={messages[locale]}>
+      <Router>
+        <App />
+      </Router>
+    </IntlProvider>
+  </ReduxProvider>,
   document.getElementById("app")
 );

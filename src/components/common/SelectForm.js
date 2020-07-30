@@ -1,9 +1,17 @@
 import React from "react";
 
-const SelectForm = ({ options, id }) => (
-  <select id={id} className="form-select">
-    {options.map((option) => (
-      <option value={option.value}>{option.text}</option>
+const SelectForm = ({ options, id, name, change, value }) => (
+  <select
+    name={name}
+    value={value}
+    id={id}
+    onChange={change}
+    className="form-select"
+  >
+    {options.map((option, index) => (
+      <option key={index} value={option.value}>
+        {option.text}
+      </option>
     ))}
   </select>
 );

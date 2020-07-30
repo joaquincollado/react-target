@@ -6,7 +6,10 @@
       "assets/*": ["src/assets/*"],
       "components/*": ["src/components/*"],
       "locales/*": ["src/locales/*"],
-      "styles/*": ["src/styles/*"]
+      "styles/*": ["src/styles/*"],
+      "actions/*": ["src/redux/actions/*"],
+      "reducers/*": ["src/redux/reducers/*"],
+      "api/*": ["src/api/*"]
     }
   },
   "exclude": ["node_modules"]

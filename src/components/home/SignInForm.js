@@ -5,11 +5,12 @@ import InputForm from "components/common/InputForm";
 
 const SignInForm = () => (
   <form className="signin-form">
-    <InputForm label="Email" type="email" id="inputEmail" />
+    <InputForm label="Email" type="email" id="inputEmail" name="email" />
     <InputForm
       label={<FormattedMessage id="form.password" />}
       type="password"
       id="inputPassword"
+      name="password"
     />
     <button className="form-button" type="submit">
       <FormattedMessage id="form.signin" />
