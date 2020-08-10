@@ -1,13 +1,15 @@
 import React from "react";
 import { FormattedMessage, useIntl } from "react-intl";
-import { connect } from "react-redux";
-import { createUser } from "actions/userActions";
+import { useDispatch } from "react-redux";
+import { signUp } from "store/actions/userActions";
 import { useState } from "react";
-import InputForm from "components/common/InputForm";
-import SelectForm from "components/common/SelectForm";
+import Input from "components/common/Input";
+import SelectInput from "components/common/SelectInput";
 
 const SignUpForm = (props) => {
   const intl = useIntl();
+
+  const dispatch = useDispatch();
 
   const selectOptions = [
     {
@@ -28,7 +30,7 @@ const SignUpForm = (props) => {
     username: "",
     email: "",
     password: "",
-    password_confirmation: "",
+    passwordConfirmation: "",
     gender: "male",
   });
 
@@ -39,8 +41,8 @@ const SignUpForm = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.createUserDispatch({ user }).then(() => {
-      history.push("/");
+    dispatch(signUp({ user })).then(() => {
+      window.location = "/";
     });
   };
 
@@ -50,7 +52,7 @@ const SignUpForm = (props) => {
       onChange={handleChange}
       onSubmit={handleSubmit}
     >
-      <InputForm
+      <Input
         label={<FormattedMessage id="form.name" />}
         type="text"
         id="inputText"
@@ -58,7 +60,7 @@ const SignUpForm = (props) => {
         value={user.username}
         change={handleChange}
       />
-      <InputForm
+      <Input
         label="Email"
         type="email"
         id="inputEmail"
@@ -66,7 +68,7 @@ const SignUpForm = (props) => {
         value={user.email}
         change={handleChange}
       />
-      <InputForm
+      <Input
         label={<FormattedMessage id="form.password" />}
         type="password"
         id="inputPassword"
@@ -75,19 +77,19 @@ const SignUpForm = (props) => {
         value={user.password}
         change={handleChange}
       />
-      <InputForm
+      <Input
         label={<FormattedMessage id="form.confirmPassword" />}
         type="password"
-        name="password_confirmation"
+        name="passwordConfirmation"
         id="inputConfirmPassword"
-        value={user.password_confirmation}
+        value={user.passwordConfirmation}
         change={handleChange}
       />
       <div className="form-group">
         <label htmlFor="genderSelect" className="form-label">
           <FormattedMessage id="form.gender" />
         </label>
-        <SelectForm
+        <SelectInput
           options={selectOptions}
           change={handleChange}
           id="genderSelect"
@@ -102,14 +104,4 @@ const SignUpForm = (props) => {
   );
 };
 
-function mapStateToProps(state) {
-  return {
-    course: state.user,
-  };
-}
-
-const mapDispatchToProps = (dispatch) => {
-  return { createUserDispatch: (user) => dispatch(createUser(user)) };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(SignUpForm);
+export default SignUpForm;

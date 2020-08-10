@@ -1,2 +1,2 @@
-export const CREATE_USER = "CREATE_USER";
-export const CREATE_USER_SUCCESS = "CREATE_USER_SUCCESS";
+export const SIGN_UP = "SIGN_UP";
+export const SIGN_UP_SUCCESS = "SIGN_UP_SUCCESS";

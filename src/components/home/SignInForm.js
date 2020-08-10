@@ -1,12 +1,12 @@
 import React from "react";
 import { FormattedMessage } from "react-intl";
 import { Link } from "react-router-dom";
-import InputForm from "components/common/InputForm";
+import Input from "components/common/Input";
 
 const SignInForm = () => (
   <form className="signin-form">
-    <InputForm label="Email" type="email" id="inputEmail" name="email" />
-    <InputForm
+    <Input label="Email" type="email" id="inputEmail" name="email" />
+    <Input
       label={<FormattedMessage id="form.password" />}
       type="password"
       id="inputPassword"
