@@ -1,4 +1,6 @@
-import initialState from "./initialState";
+const initialState = {
+  users: [],
+};
 
 export default function userReducer(state = initialState.users, action) {
   switch (action.type) {

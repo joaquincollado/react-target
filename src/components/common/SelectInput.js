@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import { arrayOf, shape, func, string, node } from "prop-types";
 
 const SelectInput = ({ options, id, name, change, value }) => (
   <select
@@ -18,11 +18,16 @@ const SelectInput = ({ options, id, name, change, value }) => (
 );
 
 SelectInput.propTypes = {
-  options: PropTypes.array.isRequired,
-  id: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  change: PropTypes.func.isRequired,
-  value: PropTypes.string.isRequired,
+  options: arrayOf(
+    shape({
+      value: string.isRequired,
+      text: node,
+    })
+  ).isRequired,
+  id: string.isRequired,
+  name: string.isRequired,
+  change: func.isRequired,
+  value: string.isRequired,
 };
 
 export default SelectInput;

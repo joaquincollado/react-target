@@ -6,7 +6,7 @@ import { useState } from "react";
 import Input from "components/common/Input";
 import SelectInput from "components/common/SelectInput";
 
-const SignUpForm = (props) => {
+const SignUpForm = () => {
   const intl = useIntl();
 
   const dispatch = useDispatch();

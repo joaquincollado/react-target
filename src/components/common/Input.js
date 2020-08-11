@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+import { func, string, node } from "prop-types";
 
 const Input = ({ id, name, label, type, placeholder, value, change }) => (
   <div className="form-group">
@@ -19,12 +19,12 @@ const Input = ({ id, name, label, type, placeholder, value, change }) => (
 );
 
 Input.propTypes = {
-  id: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  label: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
-  type: PropTypes.string.isRequired,
-  placeholder: PropTypes.string,
-  value: PropTypes.string,
-  change: PropTypes.func.isRequired,
+  id: string.isRequired,
+  name: string.isRequired,
+  label: node.isRequired,
+  type: string.isRequired,
+  placeholder: string,
+  value: string,
+  change: func.isRequired,
 };
 export default Input;
