@@ -8,8 +8,6 @@
       "locales/*": ["src/locales/*"],
       "styles/*": ["src/styles/*"],
       "store/*": ["src/redux/*"],
-      "actions/*": ["src/redux/actions/*"],
-      "reducers/*": ["src/redux/reducers/*"],
       "api/*": ["src/api/*"]
     }
   },
