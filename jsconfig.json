@@ -6,7 +6,9 @@
       "assets/*": ["src/assets/*"],
       "components/*": ["src/components/*"],
       "locales/*": ["src/locales/*"],
-      "styles/*": ["src/styles/*"]
+      "styles/*": ["src/styles/*"],
+      "store/*": ["src/redux/*"],
+      "api/*": ["src/api/*"]
     }
   },
   "exclude": ["node_modules"]

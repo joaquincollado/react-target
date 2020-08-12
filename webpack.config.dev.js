@@ -1,6 +1,7 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const magicImporter = require("node-sass-magic-importer");
+const Dotenv = require("dotenv-webpack");
 
 process.env.NODE_ENV = "development";
 
@@ -12,6 +13,8 @@ module.exports = {
       components: path.resolve(__dirname, "./src/components/"),
       locales: path.resolve(__dirname, "./src/locales/"),
       styles: path.resolve(__dirname, "./src/styles/"),
+      store: path.resolve(__dirname, "./src/redux/"),
+      api: path.resolve(__dirname, "./src/api/"),
     },
   },
   mode: "development",
@@ -35,6 +38,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "src/index.ejs",
       favicon: "src/favicon.ico",
+    }),
+    new Dotenv({
+      path: path.resolve(__dirname, `./.env.${process.env.ENV || "dev"}`),
+      systemvars: true,
     }),
   ],
   module: {
